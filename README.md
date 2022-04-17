@@ -1,1 +1,1 @@
-# sloppy-serve
+# serving my custom code like a cdn
