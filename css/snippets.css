@@ -1,0 +1,75 @@
+.btn {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: none;
+    background: transparent;
+    border-radius: 0;
+    padding: 1rem 2.5rem;
+}
+
+/* Glow A */
+
+.btn.glowA {
+    color: #3c67e3;
+    text-decoration: none;
+    border: 3px solid #3c67e3;
+    border-radius: 1rem;
+    outline: none;
+}
+
+.btn.glowA:hover {
+    -webkit-animation: glowA 1s ease-in-out;
+            animation: glowA 1s ease-in-out;
+
+}
+
+@-webkit-keyframes glowA {
+    0% {
+        -webkit-box-shadow: 0 0 15px #5ddcff,
+                    0 0 30px #4e00c2;
+                box-shadow: 0 0 15px #5ddcff,
+                    0 0 30px #4e00c2;
+    }
+}
+
+@keyframes glowA {
+    0% {
+        -webkit-box-shadow: 0 0 15px #5ddcff,
+                    0 0 30px #4e00c2;
+                box-shadow: 0 0 15px #5ddcff,
+                    0 0 30px #4e00c2;
+    }
+}
+
+/* Glow B */
+
+.btn.glowB {
+
+}
+
+.btn.glowB:hover {
+
+
+}
+
+@-webkit-keyframes glowB {
+    0% {
+        
+    }
+    100% {
+        
+    }
+}
+
+@keyframes glowB {
+    0% {
+        
+    }
+    100% {
+        
+    }
+}
