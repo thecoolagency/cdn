@@ -1,0 +1,23 @@
+{
+  "name": "tca-cdn",
+  "version": "0.2.0",
+  "description": "reusable scripts and stylesheets for any projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thecoolagency/sloppy-serve.git"
+  },
+  "keywords": [
+    "javascript",
+    "css"
+  ],
+  "author": "jonah madeya",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thecoolagency/sloppy-serve/issues"
+  },
+  "homepage": "https://github.com/thecoolagency/sloppy-serve#readme"
+}
