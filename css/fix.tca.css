@@ -601,7 +601,7 @@
             flex-wrap: wrap;
     }
 
-    @media screen and ( min-width: 749px ) {
+    @media screen and ( min-width: 750px ) {
 
         .d-flx {
             display: -webkit-box;
