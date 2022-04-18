@@ -1,75 +1,198 @@
-.btn {
-    display: inline-block;
-    font-size: 12px;
-    line-height: 12px;
-    font-weight: 900;
-    text-transform: uppercase;
-    text-decoration: none;
-    outline: none;
-    background: transparent;
-    border-radius: 0;
-    padding: 1rem 2.5rem;
-}
+/* ######################################
+    Buttons */
 
-/* Glow A */
-
-.btn.glowA {
-    color: #3c67e3;
-    text-decoration: none;
-    border: 3px solid #3c67e3;
-    border-radius: 1rem;
-    outline: none;
-}
-
-.btn.glowA:hover {
-    -webkit-animation: glowA 1s ease-in-out;
-            animation: glowA 1s ease-in-out;
-
-}
-
-@-webkit-keyframes glowA {
-    0% {
-        -webkit-box-shadow: 0 0 15px #5ddcff,
-                    0 0 30px #4e00c2;
-                box-shadow: 0 0 15px #5ddcff,
-                    0 0 30px #4e00c2;
+    .btn {
+        display: inline-block;
+        font-size: 12px;
+        line-height: 12px;
+        font-weight: 900;
+        text-transform: uppercase;
+        text-decoration: none;
+        outline: none;
+        background: transparent;
+        border-radius: 0;
+        padding: 1rem 2.5rem;
     }
-}
 
-@keyframes glowA {
-    0% {
-        -webkit-box-shadow: 0 0 15px #5ddcff,
-                    0 0 30px #4e00c2;
-                box-shadow: 0 0 15px #5ddcff,
-                    0 0 30px #4e00c2;
+    /* Glow A */
+
+    .btn.glowA {
+        color: #3c67e3;
+        text-decoration: none;
+        border: 3px solid #3c67e3;
+        border-radius: 1rem;
+        outline: none;
     }
-}
 
-/* Glow B */
+    .btn.glowA:hover {
+        -webkit-animation: glowA 1s ease-in-out;
+                animation: glowA 1s ease-in-out;
 
-.btn.glowB {
-
-}
-
-.btn.glowB:hover {
-
-
-}
-
-@-webkit-keyframes glowB {
-    0% {
-        
     }
-    100% {
-        
-    }
-}
 
-@keyframes glowB {
-    0% {
-        
+    @-webkit-keyframes glowA {
+        0% {
+            -webkit-box-shadow: 0 0 15px #5ddcff,
+                        0 0 30px #4e00c2;
+                    box-shadow: 0 0 15px #5ddcff,
+                        0 0 30px #4e00c2;
+        }
     }
-    100% {
-        
+
+    @keyframes glowA {
+        0% {
+            -webkit-box-shadow: 0 0 15px #5ddcff,
+                        0 0 30px #4e00c2;
+                    box-shadow: 0 0 15px #5ddcff,
+                        0 0 30px #4e00c2;
+        }
     }
-}
+
+    /* Glow B */
+
+    .btn.glowB {
+
+    }
+
+    .btn.glowB:hover {
+
+
+    }
+
+    @-webkit-keyframes glowB {
+        0% {
+            
+        }
+        100% {
+            
+        }
+    }
+
+    @keyframes glowB {
+        0% {
+            
+        }
+        100% {
+            
+        }
+    }
+
+/* ######################################
+    snippets - interactive buttons */
+
+    /* mobile nav button */
+
+    #navButton > .bars { 
+        zoom: 0.2;
+    }
+
+    #navButton .bars {
+        width: 120px;
+        height: 70px;
+        position: relative;
+        -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.694, 0.048, 0.335, 1);
+                transition: -webkit-transform 0.3s cubic-bezier(0.694, 0.048, 0.335, 1);
+             -o-transition:         transform 0.3s cubic-bezier(0.694, 0.048, 0.335, 1);
+                transition:         transform 0.3s cubic-bezier(0.694, 0.048, 0.335, 1);
+                transition:         transform 0.3s cubic-bezier(0.694, 0.048, 0.335, 1),
+                            -webkit-transform 0.3s cubic-bezier(0.694, 0.048, 0.335, 1);
+                transition:         transform 0.3s cubic-bezier(0.694, 0.048, 0.335, 1),
+                            -webkit-transform 0.3s cubic-bezier(0.694, 0.048, 0.335, 1);
+    }
+    #navButton .bars span {
+        display:  block;
+        width: 100%;
+        height: 10px;
+        background-color: black;
+        margin-top: 20px;
+    }
+    #navButton .bars span:first-child {
+        margin-top: 0;
+        -webkit-transform: scaleX(1);
+            -ms-transform: scaleX(1);
+                transform: scaleX(1);
+        -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.694, 0.048, 0.335, 1);
+                transition: -webkit-transform 0.3s cubic-bezier(0.694, 0.048, 0.335, 1);
+             -o-transition:         transform 0.3s cubic-bezier(0.694, 0.048, 0.335, 1);
+                transition:         transform 0.3s cubic-bezier(0.694, 0.048, 0.335, 1);
+                transition:         transform 0.3s cubic-bezier(0.694, 0.048, 0.335, 1),
+                            -webkit-transform 0.3s cubic-bezier(0.694, 0.048, 0.335, 1);
+                transition:         transform 0.3s cubic-bezier(0.694, 0.048, 0.335, 1),
+                            -webkit-transform 0.3s cubic-bezier(0.694, 0.048, 0.335, 1);
+        -webkit-transition-delay: 0.4s;
+             -o-transition-delay: 0.4s;
+                transition-delay: 0.4s;
+    }
+    #navButton .bars span:nth-child(3) {
+        width: 65%;
+        -webkit-transition: width 0.2s cubic-bezier(0.694, 0.048, 0.335, 1);
+             -o-transition: width 0.2s cubic-bezier(0.694, 0.048, 0.335, 1);
+                transition: width 0.2s cubic-bezier(0.694, 0.048, 0.335, 1);
+        -webkit-transition-delay: 0.4s;
+             -o-transition-delay: 0.4s;
+                transition-delay: 0.4s;
+    }
+
+    #navButton .bars .other-bar {
+        width: 10px;
+        height: 0;
+        background-color: black;
+        position: absolute;
+        top: -23px;
+        left: 50%;
+        margin-left: -5px;
+        -webkit-transition: height 0.4s cubic-bezier(0.694, 0.048, 0.335, 1);
+             -o-transition: height 0.4s cubic-bezier(0.694, 0.048, 0.335, 1);
+                transition: height 0.4s cubic-bezier(0.694, 0.048, 0.335, 1);
+        z-index: 10;
+    }
+
+    #navButton.open .bars {
+        -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+        -webkit-transition-delay: 0.4s;
+             -o-transition-delay: 0.4s;
+                transition-delay: 0.4s;
+    }
+
+    #navButton.open .bars span:first-child {
+        -webkit-transform: scaleX(0);
+            -ms-transform: scaleX(0);
+                transform: scaleX(0);
+        -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.694, 0.048, 0.335, 1);
+                transition: -webkit-transform 0.2s cubic-bezier(0.694, 0.048, 0.335, 1);
+             -o-transition:         transform 0.2s cubic-bezier(0.694, 0.048, 0.335, 1);
+                transition:         transform 0.2s cubic-bezier(0.694, 0.048, 0.335, 1);
+                transition:         transform 0.2s cubic-bezier(0.694, 0.048, 0.335, 1),
+                            -webkit-transform 0.2s cubic-bezier(0.694, 0.048, 0.335, 1);
+                transition:         transform 0.2s cubic-bezier(0.694, 0.048, 0.335, 1),
+                            -webkit-transform 0.2s cubic-bezier(0.694, 0.048, 0.335, 1);
+    }
+
+    #navButton.open .bars span:nth-child(3) {
+        width: 0;
+        -webkit-transition: width 0.2s cubic-bezier(0.694, 0.048, 0.335, 1);
+             -o-transition: width 0.2s cubic-bezier(0.694, 0.048, 0.335, 1);
+                transition: width 0.2s cubic-bezier(0.694, 0.048, 0.335, 1);
+    }
+
+    #navButton.open .bars .other-bar {
+        height: 120px;
+        -webkit-transition: height 0.2s cubic-bezier(0.694, 0.048, 0.335, 1);
+             -o-transition: height 0.2s cubic-bezier(0.694, 0.048, 0.335, 1);
+                transition: height 0.2s cubic-bezier(0.694, 0.048, 0.335, 1);
+        -webkit-transition-delay: 0.3s;
+             -o-transition-delay: 0.3s;
+                transition-delay:0.3s;
+    }
+
+/* ######################################
+    Template */
+
+/* ######################################
+    Template */
+
+/* ######################################
+    Template */
+
