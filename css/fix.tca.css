@@ -555,6 +555,18 @@
               align-items: center;
     }
 
+    .ctr-lf {
+        -webkit-box-align: start;
+           -ms-flex-align: start;
+              align-items: start;
+    }
+
+    .ctr-rg {
+        -webkit-box-align: end;
+           -ms-flex-align: end;
+              align-items: end;
+    }
+
     .flx.vrt {
         -webkit-box-orient: vertical;
             -ms-flex-direction: column;
