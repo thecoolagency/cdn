@@ -38,7 +38,7 @@
             setTimeout(urlAnimate, 70);
     };
 
-    // urlAnimate();
+    urlAnimate();
 
 // anim console
 
