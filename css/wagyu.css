@@ -1,0 +1,473 @@
+/*
+    CSS Theme CSS for Shopify
+
+    by Jonah Madeya 🫡
+
+    Contains:
+
+        1. Custom variables
+        2. Header
+        3. Body
+
+        9. Users
+
+*/
+
+    .nowrap {
+        flex-wrap: nowrap!important;
+    }
+
+    .section-no-border {
+        border-bottom: 0;
+    }
+
+    .header__heading-link .h2 {
+        -webkit-text-size-adjust: 100%;
+        font-size: 12px;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .locale-selectors__container {
+        overflow: hidden;
+    }
+
+    a:visited, a, a:hover {
+        color: rgba(var(--color-base-text), 1);
+    }
+
+    /* ######################################
+        #. Fonts */
+
+    .header-lg {
+        font-family: 'Asap';
+    }
+
+    .header-md {
+        font-family: 'Asap';
+    }
+
+    .header-sm {
+        font-family: 'Asap';
+    }
+
+    .text-md {
+        font-weight: 400;
+    }
+
+    .text-sm {
+        font-weight: 400;
+    }
+
+    @media screen and (min-width: 1150px) {
+
+        .header-lg {
+            font-size: 6rem;
+        }
+
+        .header-md {
+            font-size: 3.5rem;
+        }
+
+        .header-sm {
+            font-size: 2.5rem;
+        }
+
+        .text-md {
+            font-size: 1.2rem;
+        }
+
+        .text-sm {
+            font-size: 0.8rem;
+        }
+    }
+
+    @media screen and (min-width: 749px) and (max-width: 1150px) {
+
+        .header-lg {
+            font-size: 6rem;
+        }
+
+        .header-md {
+            font-size: 3.5rem;
+        }
+
+        .header-sm {
+            font-size: 2.5rem;
+        }
+
+        .text-md {
+            font-size: 1.2rem;
+        }
+
+        .text-sm {
+            font-size: 0.8rem;
+        }
+    }
+
+    @media screen and (max-width: 749px) {
+
+        .header-lg {
+            font-size: 3rem;
+        }
+
+        .header-md {
+            font-size: 2.5rem;
+        }
+
+        .header-sm {
+            font-size: 1.65rem;
+        }
+
+        .text-md {
+            font-size: 1.2rem;
+        }
+
+        .text-sm {
+            font-size: 0.8rem;
+        }
+    }
+
+/* ######################################
+    misc */
+
+    ::-webkit-scrollbar {
+        display: none!important;
+    }
+
+    .field__input::placeholder,
+    .customer .field input::placeholder {
+        opacity: 0.65;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+/* ######################################
+    0. Dawn overrides */
+
+    .button,
+    .product-form__buttons > * {
+        text-transform: uppercase;
+        letter-spacing: 0;
+    }
+
+    .button, .button:after {}
+    .button--primary {
+        background: transparent;
+        border-radius: 1rem;
+        opacity: 1;
+        position: relative;
+        border: 1px solid rgba(var(--color-base-text), 0);
+        z-index: 1;
+        text-transform: uppercase;
+        color: rgba(var(--color-base-text), 1);
+    }
+    
+    .button {
+        background: transparent;
+        border-radius: 1rem;
+        opacity: 1;
+        position: relative;
+        transition: box-shadow .2s ease-in-out;
+        z-index: 1;
+    }
+
+    .button--secondary {
+        background: transparent;
+        border-radius: 1rem;
+        opacity: 1;
+        position: relative;
+        border: 1px solid rgba(var(--color-base-text), 0);
+        z-index: 1;
+        text-transform: uppercase;
+        color: rgba(255,255,255, 1);
+        background-color: black;
+    }
+
+    .button:after, .button:before {
+        outline: none;
+        box-shadow: none;
+    }
+
+    .button,
+    .shopify-challenge__button,
+    .customer button,
+    button.shopify-payment-button__button--unbranded {
+        min-width: calc(12rem + var(--buttons-border-width) * 2);
+        min-height: calc(3.5rem + var(--buttons-border-width) * 2);
+    }
+
+  /* button primary */
+
+    .button--primary {
+        border: 1px solid rgba(0,0,0, 1);
+    }
+
+    .button, select, input {
+        border: 1px solid rgba(0,0,0, 1);
+    }
+
+    .shopify-payment-button__button {
+        font-size: 1.10rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        min-height: calc(4.35rem + var(--buttons-border-width) * 2)!important;
+        letter-spacing: 0.2rem;
+        border: 1px solid rgba(0,0,0, 1);
+    }
+
+    .field__input,
+    .select__select,
+    .customer .field input,
+    .customer select {
+        -webkit-appearance: none;
+        appearance: none;
+        height: 4.5rem;
+        position: relative;
+    }
+
+    .select__select {
+        font-size: 1.2rem;
+        width: 100%;
+        text-align: center;
+        color: rgba(var(--color-base-text), 1);
+    }
+
+    .field:hover.field:after,
+    .select:hover.select:after,
+    .select__select:hover.select__select:after,
+    .customer .field:hover.field:after,
+    .customer select:hover.select:after,
+    .localization-form__select:hover.localization-form__select:after {
+        outline: 0;
+    }
+
+    .field__input:focus-visible,
+    .select__select:focus-visible,
+    .customer .field input:focus-visible,
+    .customer select:focus-visible,
+    .localization-form__select:focus-visible.localization-form__select:after {
+        outline: 0;
+    }
+
+    .field__input:focus,
+    .select__select:focus,
+    .customer .field input:focus,
+    .customer select:focus,
+    .localization-form__select:focus.localization-form__select:after {
+        outline: 0;
+    }
+
+    .localization-form__select:focus {
+        outline: 0;
+    }
+
+    .text-area,
+    .select {
+        display: flex;
+        position: relative;
+        width: 100%;
+    }
+
+    select, 
+    input,
+    textarea {
+        background: transparent;
+        border-radius: 1rem;
+        opacity: 1;
+        position: relative;
+        border: 1px solid rgba(0,0,0, 1);
+        border-radius: 10px;
+        transition: box-shadow .2s ease-in-out;
+        z-index: 1;
+        text-transform: uppercase;
+    }
+
+
+    .quantity {
+        color: rgba(var(--color-foreground));
+        position: relative;
+        width: 100%;
+        display: flex;
+        min-height: calc((var(--inputs-border-width) * 2) + 3.5rem);
+        justify-content: center;
+    }
+
+    .quantity__input[type='number'] {
+        text-align: center;
+    }
+
+    .product-form__input {
+        position: relative;
+    }
+
+    .product-form__input .form__label {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: .75rem;
+        font-size: 1.2rem;
+        opacity: 0;
+    }
+
+/* ######################################
+    1.  */
+
+
+
+/* ######################################
+    2.  */
+
+
+/* ######################################
+    3.  */
+
+    body.collection.no-model .media > img:first-of-type {
+        opacity: 0!important;
+    }
+
+    body.collection .card__inner .card__media > div > img:nth-child(2) {
+        opacity: 0!important;
+    }
+
+    body.collection.no-model .card__inner .card__media > div > img:nth-child(2) {
+        opacity: 1!important;
+    }
+
+/* ######################################
+    4. FOOTER */
+
+    @media screen and ( max-width: 749px ) { 
+        .footer__column--info {
+            position: absolute;
+            bottom: -2rem;
+            padding: 0!important;
+        }
+    }
+
+    .close-btn-modal {
+        position: absolute;
+        right: 2.5rem;
+        top: 2rem;
+        border: 0;
+    }
+
+
+/* ######################################
+    5. MODALS */
+
+    .custom-modal-container {
+        position: absolute;
+        padding: 3rem;
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 2px 2px 8px 1px #DFDFDF;
+        border-radius: 32px;
+        opacity: 1;
+        transition: opacity 500ms ease-in-out;
+        z-index: 9;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    @media screen and ( min-width: 990px ) {
+        .custom-modal-container {
+            display: flex;
+            align-items: center;
+        }
+        .custom__shipping .custom-modal-container {
+            width: 67vw;
+            left: 30vw;
+            bottom: 5rem;
+            height: 51.5rem;
+        }
+        .custom__stockist .custom-modal-container {
+            width: 28.5vw;
+            left: -6rem;
+            bottom: 32.5rem;
+            height: 24rem;
+        }
+        .custom__contact .custom-modal-container {
+            width: 28vw;
+            left: -11rem;
+            bottom: 5rem;
+            height: 24rem;
+        }
+        .product__info-container .custom-modal-container {
+            width: 47rem;
+            left: calc(-65% + 45px);
+        }
+    }
+
+    @media screen and ( max-width: 750px ) {
+        .custom-modal-container {
+            padding: 2rem;
+            width: 90vw;
+        }
+
+        .custom__shipping .custom-modal-container {
+            bottom: 3.5rem;
+        }
+        .custom__stockist .custom-modal-container {
+            bottom: 5.5rem;
+        }
+        .custom__contact .custom-modal-container {
+            bottom: 7.5rem;
+        }
+    }
+
+    .wrapper-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        line-height: 1.25rem;
+    }
+
+    .wrapper-content p {
+        text-align: left;
+        line-height: 1.25rem;
+        margin-top: 0.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .invisible {
+        height: 0;
+        width: 0;
+        overflow: hidden;
+        opacity: 0;
+        padding: 0;
+        z-index: -1;
+        transition: opacity 500ms ease-in-out;
+    }
+
+
+
+/* ######################################
+    6. MISC */
+
+    body > div:last-child {
+        display: none;
+    }
+
+    .product__tax {
+        display: none;
+    }
+
+    body.page-contact button {
+        color: rgba(var(--color-base-text), 1);
+    }
+    body.page-contact input::placeholder,
+    body.page-contact textarea::placeholder {
+        display: none;
+        opacity: 0;
+    }
+    body.page-contact input,
+    body.page-contact textarea {
+        text-align: left!important;
+    }
+
+.rte img {
+    display: block;
+}
