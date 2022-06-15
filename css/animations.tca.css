@@ -15,24 +15,6 @@
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite;
 }
-.animated.repeat-1 {
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-    -webkit-animation-iteration-count: var(--animate-repeat);
-            animation-iteration-count: var(--animate-repeat);
-}
-.animated.repeat-2 {
-    -webkit-animation-iteration-count: calc(1 * 2);
-            animation-iteration-count: calc(1 * 2);
-    -webkit-animation-iteration-count: calc(var(--animate-repeat) * 2);
-            animation-iteration-count: calc(var(--animate-repeat) * 2);
-}
-.animated.repeat-3 {
-    -webkit-animation-iteration-count: calc(1 * 3);
-            animation-iteration-count: calc(1 * 3);
-    -webkit-animation-iteration-count: calc(var(--animate-repeat) * 3);
-            animation-iteration-count: calc(var(--animate-repeat) * 3);
-}
 .animated.delay-100ms {
     -webkit-animation-delay: 100ms;
             animation-delay: 100ms;
