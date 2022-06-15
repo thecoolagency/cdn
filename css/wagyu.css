@@ -443,7 +443,6 @@
     }
 
 
-
 /* ######################################
     6. MISC */
 
@@ -468,6 +467,11 @@
         text-align: left!important;
     }
 
-.rte img {
-    display: block;
-}
+    .rte img {
+        display: block;
+    }
+
+    .card--card, .card--standard .card__inner,
+    .card__inner {
+        background-color: transparent!important;
+    }
