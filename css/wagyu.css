@@ -8,7 +8,6 @@
         1. Custom variables
         2. Header
         3. Body
-
         9. Users
 
 */
@@ -36,6 +35,13 @@
     a:visited, a, a:hover {
         color: rgba(var(--color-base-text), 1);
     }
+
+    @media screen and (max-width:  749px) {
+        .description ul {
+            padding-left: 2rem;
+        }    
+    }
+    
 
     /* ######################################
         #. Fonts */

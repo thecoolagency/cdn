@@ -1,29 +1,31 @@
 /*
     CSS Fix & Custom Framework
-
     by Jonah Madeya 🫡
 
-    Contains:
+    Index
 
-        1. CSS-Fix
-        2. Media queries
-        3. Typography
-        4. Grid
-        5. Helpers
-        6. Margins Paddings
-        7. Flexbox framework
-        8. Position framework
-        9. Extras
-
+     1. FIX
+     2. BASIC
+     3. 
+     4. TYPOGRAPHY
+     5. GRID
+     6. HELPERS
+     7. MARGINS PADDINGS
+     8. FLEXBOX
+     9. POSITION
+    10. MEDIA QUERIES
 */
 
-
 /* ######################################
-    1. CSS-Fix */
+    1. FIX */
 
     a {
         cursor: pointer;
         text-decoration: none;
+    }
+
+    a:visited, a, a:hover {
+        color: rgba(var(--color-base-text), 1);
     }
 
     p {
@@ -42,7 +44,8 @@
         background: transparent;
     }
 
-    button, .button {
+    button,
+    .button {
         cursor: pointer;
     }
 
@@ -95,7 +98,6 @@
     code {
         display: inline-block;
         font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-        background-color: rgba(var(--color-base-background-1), 1.0);
         padding: 6px 12px;
         font-weight: bold;
         font-size: 85%;
@@ -104,63 +106,46 @@
         background-color: rgba(0, 0, 0, .1);
     }
 
-    .oos {
-        position: absolute!important;
-        height: 1px!important;
-        width: 1px!important;
-        margin: 0!important;
-        padding: 0!important;
-        overflow: hidden!important;
+/* ######################################
+    1. BASIC */
+
+    ::-webkit-scrollbar { 
+        display: none;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+    }
+
+    html {
+        box-sizing: border-box;
+        font-size: calc(1 * 62.5%);
+        height: 100%;
+    }
+
+    body {
+        min-height: 100%;
+        margin: 0;
+        font-size: 1.4rem;
+        letter-spacing: 0.02rem;
+        line-height: calc(1 + 0.8 / 1);
+    }
+
+    @media screen and (min-width: 750px) {
+        body {
+            font-size: 1.6rem;
+        }
     }
 
 
 /* ######################################
-    2. Media queries */
-
-    @media screen and ( min-width: 990px ) {
-        .tb      { display: none!important; }
-        .tb-only { display: none!important; }
-        .mb-only { display: none!important; }
-        .mb      { display: none!important; }
-        .ph      { display: none!important; }
-    }
-
-    @media screen and ( min-width: 750px ) and ( max-width: 989px ) {
-        .dt-only { display: none!important; }
-        .mb-only { display: none!important; }
-        .ph      { display: none!important; }
-    }
-
-    @media screen and ( min-width: 480px ) and ( max-width: 749px ) {
-        .dt      { display: none!important; }
-        .dt-only { display: none!important; }
-        .tb-only { display: none!important; }
-        .ph      { display: none!important; }
-    }
-
-    @media screen and ( max-width: 479px ) {
-        .dt      { display: none!important; }
-        .dt-only { display: none!important; }
-        .tb-only { display: none!important; }
-    }
+    3.  */
 
 
 /* ######################################
-    3. Typography */
-
-    /* titles */
-
-    .title--primary {
-        font-style: normal;
-    }
-
-    .title--secondary {
-        font-style: normal;   
-    }
-
-    .title--tertiary {
-        font-style: normal;
-    }
+    4. TYPOGRAPHY */
 
     /* global */
     .wgt-100 { font-weight: 100; }
@@ -173,20 +158,20 @@
     .wgt-800 { font-weight: 800; }
     .wgt-900 { font-weight: 900; }
 
-    .left {   text-align: left; }
+    .left   { text-align: left; }
     .center { text-align: center; }
-    .right {  text-align: right; }
+    .right  { text-align: right; }
 
     @media screen and ( min-width: 750px ) {
-        .d-left {   text-align: left; }
+        .d-left   { text-align: left; }
         .d-center { text-align: center; }
-        .d-right {  text-align: right; }
+        .d-right  { text-align: right; }
     }
 
     @media screen and ( max-width: 749px ) {
-        .m-left {   text-align: left; }
+        .m-left   { text-align: left; }
         .m-center { text-align: center; }
-        .m-right {  text-align: right; }
+        .m-right  { text-align: right; }
     }
 
     .list-unstyled {
@@ -198,12 +183,9 @@
     /* buttons */
 
     .reset-btn {
-        background: none;
         color: inherit;
         border: none;
         font: inherit;
-        font-size: 1rem;
-        line-height: 1rem;
         cursor: pointer;
         outline: inherit;
         -webkit-box-shadow: unset;
@@ -211,12 +193,9 @@
     }
 
     .reset-btn:after {
-        background: none;
         color: inherit;
         border: none;
         font: inherit;
-        font-size: 1rem;
-        line-height: 1rem;
         cursor: pointer;
         outline: inherit;
         -webkit-box-shadow: unset;
@@ -224,12 +203,9 @@
     }
 
     .reset-btn:before {
-        background: none;
         color: inherit;
         border: none;
         font: inherit;
-        font-size: 1rem;
-        line-height: 1rem;
         cursor: pointer;
         outline: inherit;
         -webkit-box-shadow: unset;
@@ -238,7 +214,7 @@
 
 
 /* ######################################
-    4. Grid */
+    5. Grid */
 
     .row { 
         display: -webkit-box; 
@@ -253,7 +229,7 @@
         -ms-flex-negative:        1;
               flex-shrink:        1;
          -ms-flex-preferred-size: 1;
-             flex-basis:          1;
+               flex-basis:        1;
     }
 
     .col-1 {
@@ -683,28 +659,37 @@
 
 
 /* ######################################
-    5. Helpers */
+    6. Helpers */
+
+    .oos {
+        position: absolute!important;
+        height: 1px!important;
+        width: 1px!important;
+        margin: 0!important;
+        padding: 0!important;
+        overflow: hidden!important;
+    }
 
     @media screen and (min-width: 750px) {
         .w-full { width: 100%; }
-        .w-80   { width:  80%; margin-left: auto; margin-right: auto; }
-        .w-60   { width:  60%; margin-left: auto; margin-right: auto; }
-        .w-50   { width:  50%; margin-left: auto; margin-right: auto; }
-        .w-40   { width:  40%; margin-left: auto; margin-right: auto; }
-        .w-45   { width:  45%; margin-left: auto; margin-right: auto; }
-        .w-25   { width:  25%; margin-left: auto; margin-right: auto; }
-        .w-20   { width:  20%; margin-left: auto; margin-right: auto; }
+        .w-80   { width:  80%; }
+        .w-60   { width:  60%; }
+        .w-50   { width:  50%; }
+        .w-40   { width:  40%; }
+        .w-45   { width:  45%; }
+        .w-25   { width:  25%; }
+        .w-20   { width:  20%; }
     }
 
     @media screen and (max-width: 749px) {
         .m-w-full { width: 100%; }
-        .m-w-80   { width:  80%; margin-left: auto; margin-right: auto; }
-        .m-w-60   { width:  60%; margin-left: auto; margin-right: auto; }
-        .m-w-50   { width:  50%; margin-left: auto; margin-right: auto; }
-        .m-w-40   { width:  40%; margin-left: auto; margin-right: auto; }
-        .m-w-45   { width:  45%; margin-left: auto; margin-right: auto; }
-        .m-w-25   { width:  25%; margin-left: auto; margin-right: auto; }
-        .m-w-20   { width:  20%; margin-left: auto; margin-right: auto; }
+        .m-w-80   { width:  80%; }
+        .m-w-60   { width:  60%; }
+        .m-w-50   { width:  50%; }
+        .m-w-40   { width:  40%; }
+        .m-w-45   { width:  45%; }
+        .m-w-25   { width:  25%; }
+        .m-w-20   { width:  20%; }
     }
 
     .mx-auto {
@@ -784,9 +769,8 @@
 
     .fs-0 { font-size: 0; }
 
-
 /* ######################################
-    6. Margins Paddings */
+    7. MARGINS PADDINGS */
 
     .m0  { margin:           0rem; }
     .m5  { margin:          .5rem; }
@@ -988,7 +972,7 @@
 
 
 /* ######################################
-    7. Flexbox framework */
+    8. FLEXBOX */
 
     .flx {
         display: -webkit-box;
@@ -1227,7 +1211,7 @@
 
 
 /* ######################################
-    8. Position framework */
+    9. POSITION */
 
     .rel, .relative { position: relative!important; }
     .abs, .absolute { position: absolute!important; }
@@ -1458,5 +1442,32 @@
 
 
 /* ######################################
-    9. Extra */
+    10. MEDIA QUERIES */
+
+    @media screen and ( min-width: 990px ) {
+        .tb      { display: none!important; }
+        .tb-only { display: none!important; }
+        .mb-only { display: none!important; }
+        .mb      { display: none!important; }
+        .ph      { display: none!important; }
+    }
+
+    @media screen and ( min-width: 750px ) and ( max-width: 989px ) {
+        .dt-only { display: none!important; }
+        .mb-only { display: none!important; }
+        .ph      { display: none!important; }
+    }
+
+    @media screen and ( min-width: 480px ) and ( max-width: 749px ) {
+        .dt      { display: none!important; }
+        .dt-only { display: none!important; }
+        .tb-only { display: none!important; }
+        .ph      { display: none!important; }
+    }
+
+    @media screen and ( max-width: 479px ) {
+        .dt      { display: none!important; }
+        .dt-only { display: none!important; }
+        .tb-only { display: none!important; }
+    }
 
