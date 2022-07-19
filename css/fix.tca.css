@@ -1,19 +1,16 @@
 /*
-    CSS Fix & Custom Framework
-    by Jonah Madeya 🫡
-
-    Index
+    CSS Fix & Custom Framework || by Jonah Madeya 🫡
 
      1. FIX
      2. BASIC
-     3. 
-     4. TYPOGRAPHY
-     5. GRID
-     6. HELPERS
-     7. MARGINS PADDINGS
-     8. FLEXBOX
-     9. POSITION
-    10. MEDIA QUERIES
+     3. TYPOGRAPHY
+     4. GRID
+     5. HELPERS
+     6. MARGINS PADDINGS
+     7. FLEXBOX
+     8. POSITION
+     9. MEDIA QUERIES
+    10. MISC
 */
 
 /* ######################################
@@ -114,8 +111,9 @@
         cursor: not-allowed;
     }
 
+
 /* ######################################
-    1. BASIC */
+    2. BASIC */
 
     ::-webkit-scrollbar { 
         display: none;
@@ -150,13 +148,8 @@
 
 
 /* ######################################
-    3.  */
+    3. TYPOGRAPHY */
 
-
-/* ######################################
-    4. TYPOGRAPHY */
-
-    /* global */
     .wgt-100 { font-weight: 100; }
     .wgt-200 { font-weight: 200; }
     .wgt-300 { font-weight: 200; }
@@ -188,8 +181,6 @@
         padding: 0;
         list-style: none;
     }
-
-    /* buttons */
 
     .reset-btn {
         color: inherit;
@@ -223,7 +214,7 @@
 
 
 /* ######################################
-    5. Grid */
+    4. Grid */
 
     .row { 
         display: -webkit-box; 
@@ -498,6 +489,24 @@
         }
     }
 
+    .gp5 {
+        -webkit-column-gap: .5rem;
+           -moz-column-gap: .5rem;
+                column-gap: .5rem;
+           -webkit-row-gap: .5rem;
+              -moz-row-gap: .5rem;
+                   row-gap: .5rem;
+    }
+
+    .gp10 {
+        -webkit-column-gap: 1rem;
+           -moz-column-gap: 1rem;
+                column-gap: 1rem;
+           -webkit-row-gap: 1rem;
+              -moz-row-gap: 1rem;
+                   row-gap: 1rem;
+    }
+
     .gp15 {
         -webkit-column-gap: 1.5rem;
            -moz-column-gap: 1.5rem;
@@ -506,16 +515,7 @@
               -moz-row-gap: 1.5rem;
                    row-gap: 1.5rem;
     }
-    .rgp15 {
-          -webkit-row-gap: 1.5rem;
-             -moz-row-gap: 1.5rem;
-                  row-gap: 1.5rem;
-    }  
-    .cgp15 {
-        -webkit-column-gap: 1.5rem;
-           -moz-column-gap: 1.5rem;
-                column-gap: 1.5rem;
-    }
+
     .gp20 {
         -webkit-column-gap: 2rem;
            -moz-column-gap: 2rem;
@@ -524,16 +524,7 @@
               -moz-row-gap: 2rem;
                    row-gap: 2rem;
     }
-    .rgp20 {
-           -webkit-row-gap: 2rem;
-              -moz-row-gap: 2rem;
-                   row-gap: 2rem;
-    }
-    .cgp20 {
-        -webkit-column-gap: 2rem;
-           -moz-column-gap: 2rem;
-                column-gap: 2rem;
-    }
+
     .gp30 {
         -webkit-column-gap: 3rem;
            -moz-column-gap: 3rem;
@@ -542,16 +533,25 @@
               -moz-row-gap: 3rem;
                    row-gap: 3rem;
     }
-    .rgp30 {
-           -webkit-row-gap: 3rem;
-              -moz-row-gap: 3rem;
-                   row-gap: 3rem;
-    }   
-    .cgp30 {
-        -webkit-column-gap: 3rem;
-           -moz-column-gap: 3rem;
-                column-gap: 3rem;
+
+    .gp40 {
+        -webkit-column-gap: 4rem;
+           -moz-column-gap: 4rem;
+                column-gap: 4rem;
+           -webkit-row-gap: 4rem;
+              -moz-row-gap: 4rem;
+                   row-gap: 4rem;
     }
+
+    .gp50 {
+        -webkit-column-gap: 5rem;
+           -moz-column-gap: 5rem;
+                column-gap: 5rem;
+           -webkit-row-gap: 5rem;
+              -moz-row-gap: 5rem;
+                   row-gap: 5rem;
+    }
+
     .gp60 {
         -webkit-column-gap: 6rem;
            -moz-column-gap: 6rem;
@@ -560,16 +560,28 @@
               -moz-row-gap: 6rem;
                    row-gap: 6rem;
     }
-    .rgp60 {
-           -webkit-row-gap: 6rem;
-              -moz-row-gap: 6rem;
-                   row-gap: 6rem;
-    }   
-    .cgp60 {
-        -webkit-column-gap: 6rem;
-           -moz-column-gap: 6rem;
-                column-gap: 6rem;
+
+    .gp0 {
+        -webkit-column-gap: 0!important;
+           -moz-column-gap: 0!important;
+                column-gap: 0!important;
+           -webkit-row-gap: 0!important;
+              -moz-row-gap: 0!important;
+                   row-gap: 0!important;
     }
+
+    .rgp0 {
+           -webkit-row-gap: 0!important;
+              -moz-row-gap: 0!important;
+                   row-gap: 0!important;
+    }
+
+    .cgp0 {
+        -webkit-column-gap: 0!important;
+           -moz-column-gap: 0!important;
+                column-gap: 0!important;
+    }
+
 
     @media screen and (max-width: 749px) {
         .m-gp15 {
@@ -644,6 +656,27 @@
                -moz-column-gap: calc(6rem / 2);
                     column-gap: calc(6rem / 2);
         }
+
+        .m-gp0 {
+            -webkit-column-gap: 0!important;
+               -moz-column-gap: 0!important;
+                    column-gap: 0!important;
+               -webkit-row-gap: 0!important;
+                  -moz-row-gap: 0!important;
+                       row-gap: 0!important;
+        }
+
+        .m-rgp0 {
+               -webkit-row-gap: 0!important;
+                  -moz-row-gap: 0!important;
+                       row-gap: 0!important;
+        }
+
+        .m-cgp0 {
+            -webkit-column-gap: 0!important;
+               -moz-column-gap: 0!important;
+                    column-gap: 0!important;
+        }
     }
 
     .row.p10 > .column { 
@@ -668,7 +701,7 @@
 
 
 /* ######################################
-    6. Helpers */
+    5. Helpers */
 
     .oos {
         position: absolute!important;
@@ -778,8 +811,9 @@
 
     .fs-0 { font-size: 0; }
 
+
 /* ######################################
-    7. MARGINS PADDINGS */
+    6. MARGINS PADDINGS */
 
     .m0  { margin:           0rem; }
     .m5  { margin:          .5rem; }
@@ -981,7 +1015,7 @@
 
 
 /* ######################################
-    8. FLEXBOX */
+    7. FLEXBOX */
 
     .flx {
         display: -webkit-box;
@@ -1220,7 +1254,7 @@
 
 
 /* ######################################
-    9. POSITION */
+    8. POSITION */
 
     .rel, .relative { position: relative!important; }
     .abs, .absolute { position: absolute!important; }
@@ -1451,7 +1485,7 @@
 
 
 /* ######################################
-    10. MEDIA QUERIES */
+    9. MEDIA QUERIES */
 
     @media screen and ( min-width: 990px ) {
         .tb      { display: none!important; }
@@ -1480,3 +1514,14 @@
         .tb-only { display: none!important; }
     }
 
+
+/* ######################################
+    10. MEDIA QUERIES */
+
+    .ab-cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
