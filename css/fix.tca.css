@@ -1102,6 +1102,30 @@
             flex-wrap: wrap!important;
     }
 
+    .j-st {
+        -webkit-box-pack: flex-start;
+           -ms-flex-pack: flex-start;
+         justify-content: flex-start;
+    }
+    
+    .j-end {
+        -webkit-box-pack: flex-end;
+           -ms-flex-pack: flex-end;
+         justify-content: flex-end;
+    }
+    
+    .a-st {
+        -webkit-box-align: flex-start;
+           -ms-flex-align: flex-start;
+              align-items: flex-start;
+    }
+    
+    .a-end {
+        -webkit-box-align: flex-end;
+           -ms-flex-align: flex-end;
+              align-items: flex-end;
+    }
+
     @media screen and ( min-width: 750px ) {
         .d-flx {
             display: flex;
