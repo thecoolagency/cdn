@@ -21,10 +21,6 @@
         text-decoration: none;
     }
 
-    a:visited, a, a:hover {
-        color: rgba(var(--color-base-text), 1);
-    }
-
     p {
         margin-bottom: 1.5rem;
     }
